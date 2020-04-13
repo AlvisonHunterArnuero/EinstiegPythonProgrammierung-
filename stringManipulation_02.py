@@ -9,6 +9,7 @@ def front3(str):
 
 front3("Chocolate")
 front3("era")
+front3("Nicaragua")
 front3("Chespirito")
 
 
