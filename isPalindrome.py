@@ -1,3 +1,4 @@
+# Made with ❤️ in Python 3 by Alvison Hunter - June 21th, 2020
 import re
 def is_palindrome():
     phrase = input("Please enter your word: \n")

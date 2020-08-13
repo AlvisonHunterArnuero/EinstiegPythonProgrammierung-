@@ -43,7 +43,7 @@ def main():
             logout = input("Exit this program? [y/n]: ")
             if logout == "y" or logout == "Y":
                     print('Program has ended. Thank you for using our products.')
-                    print("░░░░░░░░░░░░░░░░ Powered by Alvison Hunter ░░░░░░░░░░░░░░░")
+                    print("# Made with ❤️ in Python 3 by Alvison Hunter - April 11th, 2020")
             break
 
         else:

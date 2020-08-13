@@ -1,3 +1,4 @@
+# Made with ❤️ in Python 3 by Alvison Hunter - June 21th, 2020
 def get_prime_factors():
         num=int(input("Please Enter Your Number: \n"))
         factors = list()

@@ -50,7 +50,7 @@ def main():
         print(f"SECURITY CODE: {securitycode}  EXPIRES ON: {month}/{currYear[2:]}")
         print(f"CARD HOLDER: {name}")
         print("═"*30)
-        print("\n░░░░░░░░░░░░░░░░ Powered by Alvison Hunter ░░░░░░░░░░░░░░░")
+        print("\n Made with ❤️ in Python 3 by Alvison Hunter - August 8th, 2020")
     else:
         return print(f"We are unable to continue with this process. {firstsequence} is an invalid 4-digits number[E.g. 2345].")
     print("\nPlease verify your number and try again later. Thanks!")
