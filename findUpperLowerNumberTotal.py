@@ -2,6 +2,8 @@
 # and amount of digits we have on the given string entered by the user
 # we use a list to put all these matches and then if is successful,
 # we print it on the screen, otherwise print unsuccessful
+
+# Made with ❤️ in Python 3 by Alvison Hunter - April 24th, 2020
 import re
 def main():
     string = input("Please type in your string: ")
