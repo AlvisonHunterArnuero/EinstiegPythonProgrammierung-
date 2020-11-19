@@ -1,7 +1,7 @@
 # This routine simulates a rustic invoice process in which the user will be prompted
 # to enter quantity, description and unit price of a certain product and once all products
 # have been entered, the routine will return the total due for this purchase.
-# Made with ❤️ in Python 3 by Alvison Hunter - August 31st, 2020
+# Made with ❤️ in Python 3 by Alvison Hunter - November 17th, 2020
 def main():
     # I will store on this list the elements being entered by the user
     lst_details = []
@@ -10,16 +10,23 @@ def main():
     sub_total = 0
     # This is an optional charge, however, in this routine I will add it
     value_added_tax = 0.18
+    #last but not least, let's add a divider on this code for aesthetic purposes
+    title_sep = "══════════════════════════════════════════════════════════════════════"
+    table_sep = "______________________________________________________________________"
+
     # As usual, I add try and catch error handling to make sure I am covered
     try:
-        exit_out = 'N'
-        # Inform the user what this routines does and how to exit out when needed to
-        prg_description ="- The Royal Acme Supermarket - Products Invoice -\n"
-        prg_description +="Please enter quantity, description and unit price for each product.\n"
-        prg_description += "When you are ready to check out, please type in [y] when prompted."
+        exit_out = 'n'
+        # Inform the user what this routine does and how to exit out when needed to
+        print(title_sep)
+        program_description_lst = ["The Royal Acme Supermarket - Products Invoice", "Please enter quantity, description & unit price for each product.", "When you are ready to check out, please type in [y] when prompted."]
+        for s in program_description_lst:
+            print(s.center(70, ' '))
 
-        print(prg_description)
-        while exit_out != 'y':
+        #let's close the main title o'er here, fellows.
+        print(title_sep)
+
+        while exit_out != 'y' or exit_out =="":
             # let's capture quantity as float & add it to the list
             quantity = float(input("Enter Quantity: \n"))
             lst_details.append(str(quantity))
@@ -42,31 +49,30 @@ def main():
             # let us ask users if they would like to proceed to pay now
             exit_out = input("Would you like to proceed with the payment (y/n)? \n").lower()
 
+        # now, this is the line in where I handle the errors on this routine
+    except:
+        print("Uh oh! Something went really wrong!")
+        quit
+        # if all went well, the time has come to print the results
+    finally:
+        print(table_sep)
         # Find maximal length of all elements in list
         n = max(len(x) for l in lst_final for x in l)
         # Print the rows
         for row in lst_final:
             print(''.join(x.ljust(n+6) for x in row))
 
-        print("----------------------------------------------------------")
+        print(table_sep)
         # don't forget to add the sub total of these elements in the screen
-        print("Sub Total: {:.2f}".format(sub_total))
+        print("Sub Total: {:.2f}".format(sub_total).rjust(70))
         tax = sub_total * value_added_tax
         total_due = sub_total + tax
         # Now that ugly tax that we all hate, we need to reflect it here as well
-        print("Value Added Tax: {:.2f}".format(tax))
-        print("----------------------------------------------------------")
+        print("Value Added Tax: {:.2f}".format(tax).rjust(70))
+        print(table_sep)
         # time to tell the customer how much it has to be paid for this purchase.
-        print("Total Due: {:.2f}".format(total_due))
+        print("Total Due: {:.2f}".format(total_due).rjust(70))
 
-        # now, this is the line in where I handle the errors on this routine
-    except NameError:
-        print("Variable x is not defined")
-    except:
-        print("Uh oh! Something went really wrong!")
-        quit
-        # if all went well, the time has come to print the results
-    finally:
         # Adding tab & joining elements to be ready for printing as table
         print("""
 Thank you for your purchase from Royal Acme Supermarket.

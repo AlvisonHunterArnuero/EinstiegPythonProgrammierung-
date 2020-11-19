@@ -15,7 +15,7 @@ def domain_name(url):
     for el in lst_protocols:
         #If found, let us extract that part from this string
         if(url.find(el) != -1):
-            protocol_type= url[len(el):]
+            protocol_type = url[len(el):]
 
         #now that we remove the protocol, let's find the domain
         domain_suffix = protocol_type.find('.')
