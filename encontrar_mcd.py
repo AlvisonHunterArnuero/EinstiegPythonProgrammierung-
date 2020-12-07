@@ -1,4 +1,5 @@
-#This function implements the Euclidian algorithm to find the highest common factor (HCF)of two numbers
+#Esta función implementa el algoritmo euclidiano para encontrar el
+# factor común más alto (HCF) de dos números pasados a una funcion
 # Made with ❤️ in Python 3 by Alvison Hunter - November 3rd, 2020
 def find_GCD(int1, int2):
     while(int2):
