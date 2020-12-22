@@ -16,13 +16,13 @@ def generate_hashtag(str):
         print(str)
         return str
 
-
+#This is a set of scenarios that we will use on this particular challenge
 generate_hashtag('')# False, 'Expected an empty string to return False')
 generate_hashtag('Do We have A Hashtag')#[0], '#', 'Expeted a Hashtag (#) at the beginning.')
-generate_hashtag('Codewars')# '#Codewars', 'Should handle a single word.')
-generate_hashtag('Codewars      ')# '#Codewars', 'Should handle trailing whitespace.')
-generate_hashtag('Codewars Is Nice')# '#CodewarsIsNice', 'Should remove spaces.')
-generate_hashtag('codewars is nice')# '#CodewarsIsNice', 'Should capitalize first letters of words.')
-generate_hashtag('CodeWars is nice')# '#CodewarsIsNice', 'Should capitalize all letters of words - all lower case but the first.')
+generate_hashtag('Nicaragua')# '#Nicaragua', 'Should handle a single word.')
+generate_hashtag('Nicaragua      ')# '#Nicaragua', 'Should handle trailing whitespace.')
+generate_hashtag('Nicaragua Is Wonderful')# '#NicaraguaIsWonderful', 'Should remove spaces.')
+generate_hashtag('Nicaragua is wonderful')# '#NicaraguaIsWonderful', 'Should capitalize first letters of words.')
+generate_hashtag('Nicaragua is Wonderful')# '#NicaraguaIsWonderful', 'Should capitalize all letters of words - all lower case but the first.')
 generate_hashtag('c i n')# '#CIN', 'Should capitalize first letters of words even when single letters.')
-generate_hashtag('codewars  is  nice')# '#CodewarsIsNice', 'Should deal with unnecessary middle spaces.')
+generate_hashtag('nicaragua  is  wonderful')# '#NicaraguaIsWonderful', 'Should deal with unnecessary middle spaces.')
