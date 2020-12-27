@@ -11,6 +11,6 @@ def shopping_budget():
         quit
     finally:
         msg ="Le Sobran: " if total_costo < 0 else "Le faltan: "
-        print(msg,abs(total_costo))
+        print(f"{msg} $ {abs(total_costo)}")
 
 shopping_budget()
