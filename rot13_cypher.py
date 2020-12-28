@@ -10,8 +10,10 @@
 UNCYPHERED ="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 ROT13="NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm"
 def rot13(message):
-    return message.translate(message.maketrans(UNCYPHERED, ROT13))
+    ciphered_str = message.translate(message.maketrans(UNCYPHERED, ROT13))
+    print(ciphered_str)
+
 
 #let us call the function here now.
-rot13("test")
-rot13("Test")
+rot13("alvison hunter")
+rot13("Alvison Hunter")

@@ -26,7 +26,6 @@ class PawPatrol:
         print(f"{self.name} is a {self.breed} pup that serves as {self.profession} in the Paw Patrols.")
         print("-"*80)
 
-
 def main():
     catchphrase_list = ["No job is too big, no pup is too small!","PAW Patrol, to the Lookout!","PAW Patrol is on a roll!","PAW Patrol, to the PAW Patroller!"]
     # Declare a list of lists containing the information for the main characters of the series, shall we?
