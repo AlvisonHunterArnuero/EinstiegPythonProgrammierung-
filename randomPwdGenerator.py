@@ -24,20 +24,21 @@ def generate_rand_pwd():
     try:
         print("░░░░░░░░░░░░░ Hunter Password Generator Tool ░░░░░░░")
         print("============= We do not store any passwords. =======")
-        numCharacters = int(input("Please Enter Password Length: \n"))
-        if numCharacters < 70:
-            baseString = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@*+&^%$#!"
-            strResult = ''.join(sample(baseString, numCharacters))
+        pwd_len = int(input("Please Enter Password Length: \n"))
+        if pwd_len < 70:
+            base_str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@*+&^%$#!"
+            str_results = ''.join(sample(base_str, pwd_len))
             print(f"{bcolors.WARNING}Generating new password, please hold...{bcolors.ENDC}")
             time.sleep(1)
-            print(f"{bcolors.INFO}The new password is:{bcolors.ENDC}\n {bcolors.SUCCESS}{strResult}{bcolors.ENDC}")
+            print(f"{bcolors.INFO}The new password is:{bcolors.ENDC}\n {bcolors.SUCCESS}{str_results}{bcolors.ENDC}")
         else:
-            print ("The password length is too big, number has to be less than 70")
+            print (f"{bcolors.FAIL}The password length is too big, number has to be less than 70.{bcolors.ENDC}")
             return
     except:
-        print('Uh Oh, something went wrong!')
+        print(f"{bcolors.FAIL}Uh Oh, something went wrong!{bcolors.ENDC}")
+        return
     finally:
-        print(f"{bcolors.FOOTER}© {datetime.today().strftime('%Y-%m-%d')} Hunter Password Generator Tool. All rights reserved.{bcolors.ENDC}")
+        print(f"{bcolors.FOOTER}© {datetime.today().strftime('%Y')} Hunter Password Generator Tool. All rights reserved.{bcolors.ENDC}")
 
 
 # Time to call the function now, fellows

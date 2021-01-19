@@ -1,12 +1,15 @@
-chapulin_msgs= ['msg_01', 'msg_02', 'msg_03', 'msg_04', 'msg_05', 'msg_06']
+import time as t
+confidential_msgs= ['Contacts', 'Spies', 'Informers', 'Snitches']
 
-def clear_msgs(lst):
-    print('Tito mistakenly sent these confidential messages: \n ',lst)
-    for item in lst:
-        print('Proceeding to delete message ',item, ' Please wait...')
+def clear_msgs(lst_messages):
+    print(f"Oops, You've mistakenly sent these confidential messages: \n {lst_messages}")
+    for num, item in enumerate(lst_messages):
+        deleted_item = item
+        print(f"Proceeding to delete message #{num+1}, Please wait...")
+        t.sleep(2)
         del item
-        print('This message was successfully deleted.')
+        print(f"Message << {deleted_item} >> was successfully deleted.")
 
-clear_msgs(chapulin_msgs)
+clear_msgs(confidential_msgs)
 
 
