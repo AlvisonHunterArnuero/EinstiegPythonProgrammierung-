@@ -6,7 +6,7 @@ This repo contains most of the excercises and small routines I have coded with P
 
 ### Prerequisites
 
-Most of these files, almost 97% will run without any issues under Python 3, with the exception of one or two files that were meant to be for Kivi but I don't remember at this moment which ones are those. Sorry about that, folks!
+Most of these files, almost 97% will run without any issues under Python 3, with the exception of one or two files that were meant to be for Kivi but I don't remember at this moment which ones are those. Sorry about that, folks! There are also several files for earlier versions of Python, mostly version 2.7
 
 ## Built With
 

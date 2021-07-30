@@ -2,9 +2,11 @@ import smtplib
 
 sender = "alvison@gmail.com"
 recipient = "alvison@gmail.com"
-password = "metalica2014" # Your SMTP password for Gmail
+password = "Dude"  # Your SMTP password for Gmail
 subject = "Test email from Python"
 text = "Hello from Python"
+
+
 def send_mail():
     print('Starting...')
     try:

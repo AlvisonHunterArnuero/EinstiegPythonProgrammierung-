@@ -7,23 +7,37 @@
 # but the function should return the correct case for the initial letter. For example, the input 'sTreSS'
 # should return 'T'.
 # If a string contains all repeating characters, it should return an empty string ("") or None -- see sample tests.
-def first_non_repeating_letter(sentence):
-    word_counts = list(sentence)
-    res = None
-    for w in word_counts:
-        if(word_counts.count(w.upper())==len(word_counts)):
-            print('None: Letras todas repetidas')
-            res = None
-            return res
-        elif(word_counts.count(w)<=1):
-            res = w
-            print('Letra no repetida es: ',res)
-            return res
-        else:
-            pass
+# def first_non_repeating_letter(sentence):
+#     word_counts = list(sentence)
+#     first_not_rept = None
+#     for w in word_counts:
+#         if(word_counts.count(w.upper()) == len(word_counts)):
+#             print('None: Letras todas repetidas')
+#             first_not_rept = None
+#         elif(word_counts.count(w) <= 1):
+#             first_not_rept = w
+#             print('Not Repeated: ', first_not_rept)
+#         else:
+#             pass
 
-    print('Final Result',res)
-    return res
+#     print('Repeated character is: ', first_not_rept)
+#     return first_not_rept
+
+import collections
+
+
+def first_non_repeating_letter(sentence):
+    word_dict = {}
+    keys_lst = []
+    for k, v in collections.Counter(list(sentence)).items():
+        word_dict[k] = v
+        keys_lst.append(v)
+
+    for k in list(word_dict):
+        if(word_dict[k] > 1):
+            word_dict.pop(k, None)
+
+    print(word_dict)
 
 
 first_non_repeating_letter('a')
@@ -37,8 +51,3 @@ first_non_repeating_letter('~><#~><')
 first_non_repeating_letter('hello world, eh?')
 first_non_repeating_letter('sTreSS')
 first_non_repeating_letter('Go hang a salami, I\'m a lasagna hog!')
-
-
-
-
-

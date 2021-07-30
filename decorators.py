@@ -1,8 +1,8 @@
-# INTRO  TO DECORATORS WITH PYTHON 3
+# INTRODUCTION TO BASIC DECORATORS USING PYTHON 3
 # Decorators provide a way to modify functions using other functions.
 # This is ideal when you need to extend the functionality of functions
-# that you don't want to modify.
-# Made with ❤️ in Python 3 by Alvison Hunter - December 27th, 2020
+# that you don't want to modify. Let's take a look at this example:
+# Made with ❤️ in Python 3 by Alvison Hunter - June 15th, 2021
 # Website: https://alvisonhunter.com/
 
 def my_decorator(func, caption):
@@ -22,10 +22,13 @@ def my_decorator(func, caption):
 
 # This is the function that we will pass to  the decorator
 # This will receive a param msg containing the text for the box
+
+
 def boxed_header(msg):
     vline = "┃"
     title = msg.center(len(msg)+2, ' ')
     print(f"{vline}{title}{vline}")
+
 
 decorated = my_decorator(boxed_header, "I bloody love Python")
 decorated()
