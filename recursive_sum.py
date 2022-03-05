@@ -1,5 +1,8 @@
+# -------------------------------------------------------------------------
 # Find the recursive sum of an N integer number given by the user
-# Made with ❤️ in Python 3 by Alvison Hunter - January 17th, 2021
+# Made with ❤️ in Python 3 by Alvison Hunter - January 13th, 2022
+# JavaScript, Python and Web Development tips at: https://bit.ly/3p9hpqj
+# -------------------------------------------------------------------------
 def recursive_sum(n):
     return n if n <= 1 else n + recursive_sum(n-1)
 

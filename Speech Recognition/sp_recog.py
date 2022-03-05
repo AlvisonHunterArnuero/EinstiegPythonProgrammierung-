@@ -1,7 +1,13 @@
-# My simple Speech Recognition Demonstration Routine 😊
-# Made with ❤️ in Python 3 by Alvison Hunter - March 1st, 2020
+# -----------------------------------------------------------------------
+# Basic Speech Recognition Demonstration Routine for my medium blog 😊
+# Made with ❤️ in Python 3 by Alvison Hunter - November 14th, 2021
 # JavaScript, Python and Web Development tips at: https://bit.ly/3p9hpqj
 # -----------------------------------------------------------------------
+
+# To install use pip install SpeechRecognition
+# https://pypi.org/project/SpeechRecognition/
+
+
 # Importing the libraries that will do the magic part 🐵
 import speech_recognition as sr
 import webbrowser as wb

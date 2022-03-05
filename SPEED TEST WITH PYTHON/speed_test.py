@@ -1,3 +1,9 @@
+# ---------------------------------------------------------------------------------------------
+# Description: Build a simple Internet Performance and Network Speed Test Routine
+# Author: Made with ❤️ in Python 3 by Alvison Hunter - September 26th, 2021
+# JavaScript, Python and Web Development tips at: https://bit.ly/3p9hpqj
+# ---------------------------------------------------------------------------------------------
+
 import speedtest
 from time import sleep
 from tqdm import tqdm
@@ -6,6 +12,7 @@ from colorama import Fore, init
 init(autoreset=True)
 
 print(Fore.GREEN + "GETTING BEST AVAILABLE SERVERS, UPLOADING & DOWNLOADING SPEED.....")
+
 # initializing the SpeedTest instance
 st = speedtest.Speedtest()
 
@@ -30,8 +37,9 @@ dwnl = str(res_dict['download'])[:2] + "." + \
 
 upl = str(res_dict['upload'])[:2] + "." + str(res_dict['upload'])[2:4]
 
-# Display results in a nice looking table
+# Display results in a nice looking table using colorama features
 print("")
+
 # divider - a line in the screen with a fixed width
 print(Fore.MAGENTA + "="*80)
 print(Fore.GREEN + "INTERNET SPEED TEST RESULTS:".center(80))
