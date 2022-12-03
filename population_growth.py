@@ -18,10 +18,11 @@
 # Website: https://alvisonhunter.com/
 def nb_year(p0, percent, aug, p):
     growth = (p0 + 1000) * percent
+    return(growth) 
 
 
 
 # Examples:
-nb_year(1000, 5, 100, 5000) -> 15
-nb_year(1500, 5, 100, 5000) -> 15
-nb_year(1500000, 2.5, 10000, 2000000) -> 10
+print(nb_year(1000, 5, 100, 5000)) # -> 15
+print(nb_year(1500, 5, 100, 5000))# -> 15
+print(nb_year(1500000, 2.5, 10000, 2000000)) # -> 10
